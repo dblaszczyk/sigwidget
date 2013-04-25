@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.danielb.sigwidget"
+      android:versionCode="1">
+   <application android:icon="@drawable/icon" android:label="@string/app_name">
+	<receiver android:name="SigWidgetProvider">
+    <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        <action android:name="android.telephony.PhoneStateListener.LISTEN_SIGNAL_STRENGTHS" />
+    </intent-filter>
+   	<meta-data android:name="android.appwidget.provider"
+               android:resource="@xml/sig_widget_def" />
+	</receiver>
+    </application>
+</manifest> 
